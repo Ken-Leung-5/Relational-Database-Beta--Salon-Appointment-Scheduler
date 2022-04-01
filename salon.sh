@@ -71,6 +71,7 @@ MAIN_MENU(){
   if [[ $APPOINTMENT_RESULT=='INSERT 0 1' ]]
   then
     echo -e "\nI have put you down for a $(echo $SERVICE_NAME | sed -r 's/^ *| *$//g') at $(echo $SERVICE_TIME | sed -r 's/^ *| *$//g'), $(echo $CUSTOMER_NAME | sed -r 's/^ *| *$//g')."
+    exit
   else
     MAIN_MENU "Unexpected error occur, please try again."
   fi
